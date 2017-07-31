@@ -1,0 +1,39 @@
+<!--align-title="left" 可以设置title的位置-->
+<ion-header-bar align-title="left" class="bar-positive">
+    <div class="buttons">
+        <button class="button" ng-click="doSomething()">左侧按钮</button>
+    </div>
+    <h1 class="title">Title!</h1>
+    <div class="buttons">
+        <button class="button">右侧按钮</button>
+    </div>
+</ion-header-bar>
+
+<!--delegate-handle (可选) 字符串 该句柄用于标识带有$ionicScrollDelegate的滚动视图。 padding (可选) 布尔值 是否在内容上添加内填充。在iOS上默认为true，在Android上为false。 scroll (可选) 布尔值 是否允许内容滚动。默认为true。 overflow-scroll (可选) 布尔值 是否用溢出滚动代替Ionic滚动。 has-bouncing (可选) 布尔值 是否允许内容滚动反弹到边缘(是否能继续拉动)。iOS上默认为true，Android上默认为false。 on-scroll (可选) 表达式 当内容滚动时表现的评估。 on-scroll-complete (可选) 表达式 一个继续拉动页面动作完成时表现的评估。-->
+<ion-content delegate-handle="myContent" padding="false" scroll="true" overflow-scroll="false" has-bouncing="true" on-scroll="doSome()" on-scroll-complete="endDoSome()">
+    一些内容!
+    <!--<div ng-repeat="num in numArray track by $index">-->
+        <div style="height: 500px;background-color: red">1</div>
+        <div style="height: 500px;background-color: aqua">2</div>
+        <div style="height: 500px;background-color: pink">3</div>
+        <div style="height: 500px;background-color: antiquewhite">4</div>
+    <!--</div>-->
+    <!--做蒙版用的-->
+    <ion-pane style="opacity: .5;">
+
+    </ion-pane>
+
+</ion-content>
+
+
+
+
+<ion-footer-bar align-title="left" class="bar-assertive">
+    <div class="buttons">
+        <button class="button">左侧按钮</button>
+    </div>
+    <h1 class="title">Title!</h1>
+    <div class="buttons" ng-click="scrollTop()">
+        <button class="button">返回顶部</button>
+    </div>
+</ion-footer-bar>

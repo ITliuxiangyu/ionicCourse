@@ -1,0 +1,32 @@
+<ion-view view-title="home">
+
+
+    <ion-content id="homeContent">
+        <!--pulling-icon="ion-ionic"-->
+        <!--refreshing-icon="ion-home"-->
+        <ion-refresher
+                pulling-text="下拉刷新..."
+                spinner="lines"
+                on-pulling="beginPull()"
+                on-refresh="doRefresh()"
+                refreshing-text="加载中..."
+        >
+        </ion-refresher>
+
+
+        <ion-list>
+            <ion-item ng-repeat="item in home.items">
+                {{item.title}}
+            </ion-item>
+        </ion-list>
+
+
+        <ion-infinite-scroll
+                ng-if="home.isShowInfinite"
+                spinner="lines"
+                on-infinite="loadMore()">
+        </ion-infinite-scroll>
+
+    </ion-content>
+
+</ion-view>

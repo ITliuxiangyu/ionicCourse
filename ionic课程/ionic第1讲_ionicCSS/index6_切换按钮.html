@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../lib/css/ionic.min.css">
+
+    <!--1.1.0之后checkbox对于纯css的点击无效了-->
+    <link href="http://cdn.bootcss.com/ionic/1.1.0/css/ionic.min.css" rel="stylesheet">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <style>
+        html,body{
+            height: 100%;
+            overflow: scroll;
+        }
+    </style>
+</head>
+<body class="content" ng-controller="myController">
+
+    <!--切换开关可以使用 toggle-assertive 来指定颜色-->
+    <label class="toggle toggle-assertive">
+        <input type="checkbox">
+        <div class="track">
+            <div class="handle"></div>
+        </div>
+    </label>
+
+    <div class="item item-toggle">
+        哈哈
+        <label class="toggle toggle-assertive">
+            <input type="checkbox">
+            <div class="track">
+                <div class="handle"></div>
+            </div>
+        </label>
+    </div>
+
+    <!--复选框-->
+    <!--这是js部分的复选框-->
+    <ion-checkbox ng-model="filter.blue">Red</ion-checkbox>
+
+    <!--checked=''代表默认选中-->
+    <ul class="list">
+        <li class="item item-checkbox">
+            <label class="checkbox checkbox-assertive">
+                <input type="checkbox" checked="">
+            </label>
+            Flux Capacitor
+        </li>
+        <li class="item item-checkbox">
+            <label class="checkbox">
+                <input type="checkbox">
+            </label>
+            Plutonium Resupply
+        </li>
+    </ul>
+
+    <!--单选框-->
+    <!--必须配合js才能实现-->
+    <!--<ion-radio ng-model="choice" ng-value="'A'">Choose A</ion-radio>-->
+    <!--<ion-radio ng-model="choice" ng-value="'B'">Choose B</ion-radio>-->
+    <div class="list">
+        <!--checked="checked"代表默认选中-->
+        <label class="item item-radio">
+            <input type="radio" name="group" value="go" checked="checked">
+            <div class="item-content">
+                Go
+            </div>
+            <i class="radio-icon ion-checkmark"></i>
+        </label>
+
+        <label class="item item-radio">
+            <input type="radio" name="group" value="python">
+            <div class="item-content">
+                Python
+            </div>
+            <i class="radio-icon ion-checkmark"></i>
+        </label>
+    </div>
+
+    <!--滑块组件-->
+    <div class="item range">
+        <i class="icon ion-volume-low"></i>
+        <input type="range" name="volume">
+        <i class="icon ion-volume-high"></i>
+    </div>
+
+    <div class="list">
+        <div class="item range range-positive">
+            <i class="icon ion-ios-sunny-outline"></i>
+            <input type="range" name="volume" min="0" max="100" value="33">
+            <i class="icon ion-ios-sunny"></i>
+        </div>
+    </div>
+
+    <!--下拉选择-->
+    <!--ionic select 的 select 相比原生的要更加美观些。但是弹出的可选选项样式是浏览器默认的。-->
+
+    <!--每个平台上的可选项样式都是不一样的，在PC电脑的浏览器上，你会看到传统的下拉界面，Android 上会弹出单选按钮选项，iOS 有个滚轮操作界面。-->
+    <div class="list">
+        <label class="item item-input item-select">
+            <div class="input-label">
+                Lightsaber
+            </div>
+            <select>
+                <option>Blue</option>
+                <option selected>Green</option>
+                <option>Red</option>
+            </select>
+        </label>
+
+    </div>
+</body>
+</html>
+<script src="../lib/js/ionic.bundle.min.js"></script>
+<script>
+
+    angular.module('myApp',['ionic']).controller('myController',['$scope',function ($scope) {
+
+    }])
+
+</script>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../lib/css/ionic.min.css">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <style>
+        html,body{
+            height: 100%;
+            overflow: scroll;
+        }
+
+    </style>
+</head>
+<body class="content">
+    <!--在带有 row 的样式的元素里如果包含了 col 的样式，col 就会设置为同等大小。 以下实例中 row 的样式包含了 5 个 col 样式，每个 col 的宽度为 20%。-->
+
+    <div class="row">
+        <div class="col assertive-bg">.col</div>
+        <div class="col balanced-bg">.col</div>
+        <div class="col calm-bg">.col</div>
+        <div class="col dark-bg">.col</div>
+        <div class="col energized-bg">.col</div>
+    </div>
+
+    <br>
+    <!--使用栅格系统的好处在于你只需要指明你需要的列占位百分比即可,其他的列就会被平均分配使用剩下的空间.-->
+
+    <div class="row">
+        <div class="col col-50 energized-bg">.col.col-50</div>
+        <div class="col dark-bg">.col</div>
+        <div class="col calm-bg">.col</div>
+    </div>
+
+    <div class="row">
+        <div class="col col-75 energized-bg">.col.col-75</div>
+        <div class="col balanced-bg">.col</div>
+    </div>
+
+    <div class="row">
+        <div class="col balanced-bg">.col</div>
+        <div class="col col-75 assertive-bg">.col.col-75</div>
+    </div>
+
+    <div class="row">
+        <div class="col balanced-bg">.col</div>
+        <div class="col assertive-bg">.col</div>
+    </div>
+
+    <br>
+    <!--有偏移量的栅格，实例如下：-->
+    <div class="row">
+      <div class="col col-33 col-offset-33 assertive-bg">.col</div>
+      <div class="col energized-bg">.col</div>
+    </div>
+
+    <div class="row">
+      <div class="col col-33 dark-bg">.col</div>
+      <div class="col col-33 col-offset-33 balanced-bg">.col</div>
+    </div>
+
+    <div class="row">
+      <div class="col col-33 col-offset-67 positive-bg">.col</div>
+    </div>
+
+    <!--纵向对其的栅格-->
+    <!--col-center col-top col-bottom设置位置-->
+    <div class="row">
+        <div class="col">.col</div>
+        <div class="col">.col</div>
+        <div class="col balanced-bg">.col</div>
+        <div class="col dark-bg">1<br>2<br>3<br>4</div>
+    </div>
+
+    <div class="row">
+        <div class="col col-top">.col</div>
+        <div class="col col-center">.col</div>
+        <div class="col col-bottom">.col</div>
+        <div class="col">1<br>2<br>3<br>4</div>
+    </div>
+
+    <div class="row row-top">
+        <div class="col">.col</div>
+        <div class="col">.col</div>
+        <div class="col">.col</div>
+        <div class="col">1<br>2<br>3<br>4</div>
+    </div>
+
+    <div class="row row-center">
+        <div class="col">.col</div>
+        <div class="col">.col</div>
+        <div class="col">.col</div>
+        <div class="col">1<br>2<br>3<br>4</div>
+    </div>
+
+    <div class="row row-bottom">
+        <div class="col">.col</div>
+        <div class="col">.col</div>
+        <div class="col">.col</div>
+        <div class="col">1<br>2<br>3<br>4</div>
+    </div>
+
+    <!--响应式栅格  小于不同的大小自动换行响应式布局-->
+    <div class="row responsive-sm">
+        <div class="col positive-bg">.col</div>
+        <div class="col energized-bg">.col</div>
+        <div class="col assertive-bg">.col</div>
+        <div class="col dark-bg">.col</div>
+    </div>
+    <!--padding 在四周添加内边距 默认的是10px.
+    padding-vertical 添加内边距到顶和底.
+    padding-horizontal 添加内边距到左和右.
+    padding-top 添加内边距到顶.
+    padding-right 添加内边距到右.
+    padding-bottom 添加内边距到底.
+    padding-left 添加内边距到左-->
+    <div class="padding-top" style="background-color: red">22</div>
+</body>
+</html>

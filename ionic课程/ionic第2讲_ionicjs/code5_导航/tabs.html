@@ -1,0 +1,18 @@
+<!--导航栏可以写在tabs里也可以写在index页面,但是如果使用menu这种需要很大范围的就要写在menu的配置页面了-->
+<ion-nav-bar delegate-handle="myNavBar" class="bar-dark nav-title-slide-ios7" align-title="center">
+    <ion-nav-back-button class="button-clear">
+        <i class="ion-arrow-left-c"></i> 后退
+    </ion-nav-back-button>
+</ion-nav-bar>
+
+<ion-tabs delegate-handle="myTabs" class="tabs-icon-top">
+
+    <ion-tab title="home" href="#/tabs/home" icon-on="bar-home-on" icon-off="ion-ios-home-outline" badge="" badge-style="tabs-positive" on-select="selectTab()" on-deselect="unSelectTab()" ng-click="doSelect()">
+    <ion-nav-view name="tab-home"></ion-nav-view>
+    </ion-tab>
+
+    <ion-tab title="other" href="#/tabs/other" icon-on="ion-ios-chatbubble" icon-off="ion-ios-chatbubble-outline">
+        <ion-nav-view name="tab-other"></ion-nav-view>
+    </ion-tab>
+
+</ion-tabs>

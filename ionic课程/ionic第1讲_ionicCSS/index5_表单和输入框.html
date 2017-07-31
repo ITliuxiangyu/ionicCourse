@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../lib/css/ionic.min.css">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <style>
+        html,body{
+            height: 100%;
+            overflow: scroll;
+        }
+    </style>
+</head>
+<body class="content">
+
+    <!--输入列表-->
+    <div class="list">
+        <label class="item item-input">
+            <input type="text" placeholder="First Name">
+        </label>
+        <label class="item item-input">
+            <input type="text" placeholder="Last Name">
+        </label>
+        <label class="item item-input">
+            <textarea placeholder="Comments"></textarea>
+        </label>
+    </div>
+
+    <!--使用 input-label 将标签放置于输入框 input 的左侧。同时你还可以使用placeholder。-->
+    <div class="list">
+        <label class="item item-input">
+            <span class="input-label">Username</span>
+            <input type="text">
+        </label>
+        <label class="item item-input">
+            <span class="input-label">Password</span>
+            <input type="password">
+        </label>
+    </div>
+
+    <!--堆叠标签通常位于输入框的头部。每个选项使用 item-stacked-label 类指定。 每个输入框需要指定 input-label。以下实例也使用了 placeholder 属性来设置信息输入提示。-->
+
+    <div class="list">
+        <label class="item item-input item-stacked-label">
+            <span class="input-label">First Name</span>
+            <input type="text" placeholder="John">
+        </label>
+        <label class="item item-input item-stacked-label">
+            <span class="input-label">Last Name</span>
+            <input type="text" placeholder="Suhr">
+        </label>
+        <label class="item item-input item-stacked-label">
+            <span class="input-label">Email</span>
+            <input type="text" placeholder="john@suhr.com">
+        </label>
+    </div>
+
+    <!--item-floating-label浮动标签 测试无效-->
+    <div class="list">
+        <label class="item item-input item-floating-label">
+            <span class="input-label">First Name</span>
+            <input type="text" placeholder="First Name">
+        </label>
+        <label class="item item-input item-floating-label">
+            <span class="input-label">Last Name</span>
+            <input type="text" placeholder="Last Name">
+        </label>
+        <label class="item item-input item-floating-label">
+            <span class="input-label">Email</span>
+            <input type="text" placeholder="Email">
+        </label>
+    </div>
+
+    <!--内嵌表单-->
+    <div class="list list-inset">
+        <label class="item item-input">
+            <input type="text" placeholder="First Name">
+        </label>
+        <label class="item item-input">
+            <input type="text" placeholder="Last Name">
+        </label>
+    </div>
+
+
+    <!--使用 list-inset 设置内嵌实体列表。 使用 item-input-inset 样式可以内嵌一个按钮。-->
+
+    <div class="list">
+
+        <div class="item item-input-inset">
+            <label class="item-input-wrapper">
+                <input type="text" placeholder="Email">
+            </label>
+            <button class="button button-small">
+                Submit
+            </button>
+        </div>
+
+    </div>
+
+    <!--item-input 输入框可以很简单的添加图标。 图标可以在 <input> 前添加。 默认的图标会使用label文字的颜色, 但你也可以添加placeholder-icon来改变placeholder的颜色-->
+
+    <div class="list list-inset">
+        <label class="item item-input">
+            <i class="icon ion-search placeholder-icon"></i>
+            <input type="text" placeholder="Search">
+        </label>
+    </div>
+
+
+    <!--输入框可放置在头部，并可添加提交或取消按钮。-->
+    <div class="bar bar-header item-input-inset">
+        <label class="item-input-wrapper">
+            <i class="icon ion-ios-search placeholder-icon"></i>
+            <input type="search" placeholder="Search">
+        </label>
+        <button class="button button-clear">
+            Cancel
+        </button>
+    </div>
+
+</body>
+</html>

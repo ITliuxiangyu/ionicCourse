@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="../lib/css/ionic.min.css">
+</head>
+<body>
+    <button class="button button-dark">
+        button-dark
+    </button>
+
+    <!--button-block 与文档不一致版本的问题 现在没有默认的padding距离了-->
+    <div style="padding: 10px">
+        <button class="button button-block button-positive">
+            Block Button
+        </button>
+    </div>
+
+    <!--button-full 与文档不一致的 撑满屏幕 只是没有圆角了 并且也受父视图的padding影响了-->
+    <div style="padding: 10px">
+        <button class="button button-full button-positive">
+            Full Width Block Button
+        </button>
+    </div>
+
+    <!--不同大小的button-->
+    <button class="button button-small button-assertive">
+        Small Button
+    </button>
+    <button class="button button-large button-positive">
+        Large Button
+    </button>
+
+    <!--button-positive 会使文字和边框变成蓝色,背景却是透明的-->
+    <button class="button button-outline button-positive">
+        Outlined Button
+    </button>
+    <!--干净的按钮-->
+    <button class="button button-clear button-positive">
+        Clear Button
+    </button>
+
+    <!--带图标的按钮  图标能够以子元素的形式被放在按钮内部,不过,直接把图标分配给按钮将减少DOM的数量-->
+    <!--icon-left可以控制位置-->
+    <button class="button">
+        <i class="icon ion-home"></i> Loading...
+    </button>
+
+    <button class="button icon-left ion-home">Home</button>
+
+    <!--按钮组  同样没有默认的padding了-->
+    <div class="button-bar">
+        <a class="button button-assertive">First</a>
+        <a class="button button-calm">Second</a>
+        <a class="button button-dark">Third</a>
+    </div>
+</body>
+</html>

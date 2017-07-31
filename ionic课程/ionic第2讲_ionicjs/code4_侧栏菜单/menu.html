@@ -1,0 +1,33 @@
+
+<ion-side-menus delegate-handle="myMenus">
+    <!-- 中间内容 -->
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-dark">
+            <ion-nav-back-button>
+            </ion-nav-back-button>
+        </ion-nav-bar>
+        <ion-tabs delegate-handle="myTabs">
+
+            <ion-tab title="home" href="#/menu/home" icon="ion-ios-home" icon-on="ion-ios-home" icon-off="ion-ios-home-outline" badge="" badge-style="tabs-positive" on-select="selectTab()" on-deselect="unSelectTab()" ng-click="doSelect()">
+                <ion-nav-view name="menu-home" animation="slide-left-right"></ion-nav-view>
+            </ion-tab>
+
+            <ion-tab title="other" href="#/menu/other" icon-on="ion-ios-chatbubble" icon-off="ion-ios-chatbubble-outline">
+                <ion-nav-view name="menu-other"></ion-nav-view>
+            </ion-tab>
+
+        </ion-tabs>
+    </ion-side-menu-content>
+
+    <!-- 左侧菜单 -->
+    <ion-side-menu side="left" width="100" is-enabled="true">
+        左侧
+        <!--<a menu-close href="#/menu/home" class="button button-assertive">home</a>-->
+        <a nav-clear menu-close href="#/menu/homeDetail" class="item">首页</a>
+    </ion-side-menu>
+
+    <!-- 右侧菜单 -->
+    <ion-side-menu side="right">
+        右侧
+    </ion-side-menu>
+</ion-side-menus>

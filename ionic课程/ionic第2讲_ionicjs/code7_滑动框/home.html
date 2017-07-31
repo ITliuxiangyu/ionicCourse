@@ -1,0 +1,34 @@
+<ion-view view-title="home">
+
+
+    <ion-content>
+
+        <!--<ion-slide-box  on-slide-changed="slideHasChanged(index)"  auto-play="true" does-continue='true' slide-interval="2000" show-pager="true" pager-click="clickTheSlideBox(index)" active-slide="doSome">-->
+            <!--<ion-slide >-->
+                <!--<div style="height: 300px;background-color: blue"><h1>BLUE</h1></div>-->
+            <!--</ion-slide>-->
+            <!--<ion-slide>-->
+                <!--<div style="height: 300px;background-color: yellow"><h1>YELLOW</h1></div>-->
+            <!--</ion-slide>-->
+            <!--<ion-slide>-->
+                <!--<div style="height: 300px;background-color: red"><h1>PINK</h1></div>-->
+            <!--</ion-slide>-->
+        <!--</ion-slide-box>-->
+        <ion-slide-box delegate-handle="mySlideBox">
+            <ion-slide>
+                <div style="height: 300px;background-color: #4b8bf4">
+                    <button ng-click="nextSlide()">下一个滑块!</button>
+                </div>
+            </ion-slide>
+            <ion-slide>
+                <div style="background-color: #8f8f8f;height: 300px">
+                    滑块 2!
+                    <button ng-click="nextSlide()">上一个滑块!</button>
+                </div>
+            </ion-slide>
+        </ion-slide-box>
+
+
+    </ion-content>
+
+</ion-view>

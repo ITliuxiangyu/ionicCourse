@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../lib/css/ionic.min.css">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <style>
+        html,body{
+            height: 100%;
+            overflow: scroll;
+        }
+    </style>
+</head>
+<body class="content">
+    <!--tabs-icon-top代表图标在文字的顶部-->
+    <div class="tabs tabs-icon-top">
+        <a class="tab-item">
+            <i class="icon ion-home"></i>
+            Home
+        </a>
+        <a class="tab-item">
+            <i class="icon ion-star"></i>
+            Favorites
+        </a>
+        <a class="tab-item">
+            <i class="icon ion-gear-a"></i>
+            Settings
+        </a>
+    </div>
+
+    <!--tabs-icon-left代表图标在文字的左边-->
+    <div class="tabs tabs-icon-left">
+        <a class="tab-item">
+            <i class="icon ion-home"></i>
+            Home
+        </a>
+        <a class="tab-item">
+            <i class="icon ion-star"></i>
+            Favorites
+        </a>
+        <a class="tab-item">
+            <i class="icon ion-gear-a"></i>
+            Settings
+        </a>
+    </div>
+
+    <!--条纹样式选项卡-->
+    <!--可以在带有 tabs 的样式名的元素上添加 tabs-striped 来实现像 Android 风格的 tabs。-->
+
+    <!--也可以添加 tabs-top 来实现选项卡在页面顶部。-->
+
+    <!--条纹选项卡颜色可通过 tabs-background-{color} 和 tabs-color-{color} 来控制, {color} 值可以是： default, light, stable, positive, calm, balanced, energized, assertive, royal, or dark-->
+
+    <!--注意：如果要再选项卡上设置头部标题，需要使用 has-tabs-top 类。-->
+    <!--active控制谁被激活-->
+    <div class="bar bar-header has-tabs-top bar-positive">
+        <h3 class="title">哈哈</h3>
+
+    </div>
+    <div class="tabs-striped tabs-top tabs-background-positive tabs-color-light">
+
+        <div class="tabs">
+            <a class="tab-item active" href="#">
+                <i class="icon ion-home"></i>
+                Test
+            </a>
+            <a class="tab-item" href="#">
+                <i class="icon ion-star"></i>
+                Favorites
+            </a>
+            <a class="tab-item" href="#">
+                <i class="icon ion-gear-a"></i>
+                Settings
+            </a>
+        </div>
+    </div>
+
+    <div class="tabs-striped tabs-color-assertive">
+        <div class="tabs">
+            <a class="tab-item active" href="#">
+                <i class="icon ion-home"></i>
+                Test
+            </a>
+            <a class="tab-item" href="#">
+                <i class="icon ion-star"></i>
+                Favorites
+            </a>
+            <a class="tab-item" href="#">
+                <i class="icon ion-gear-a"></i>
+                Settings
+            </a>
+        </div>
+    </div>
+</body>
+</html>

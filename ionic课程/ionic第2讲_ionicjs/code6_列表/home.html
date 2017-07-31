@@ -1,0 +1,65 @@
+<ion-view view-title="home"  ng-controller="homeController">
+
+    <ion-header-bar class="bar-dark">
+        <!--<button class="button button-icon icon ion-ios-minus-outline"-->
+                <!--ng-click="showDelete = !showDelete; showReorder = false">-->
+        <!--</button>-->
+        <button class="button button-icon icon ion-ios-minus-outline"
+        ng-click="listDelegateDoSome()">
+        </button>
+        <span class="title">home</span>
+        <button class="button" ng-click="showDelete = false; showReorder = !showReorder">
+            Reorder
+        </button>
+    </ion-header-bar>
+    <ion-content>
+
+        <ion-list delegate-handle="myList" show-delete="showDelete" show-reorder="showReorder" can-swipe="true">
+
+            <!--<ion-item ng-repeat="item in items">-->
+            <!--collection-repeat 的不能移动-->
+            <ion-item style="border: none" collection-repeat="item in items" collection-item-width="50%" collection-item-height="getItemHeight(item, $index)" class="item-thumbnail-left">
+                <img src="../../lib/1.jpg">
+                {{item}}
+                <ion-option-button class="button-positive"
+                                   ng-click="share(item)">
+                    分享
+                </ion-option-button>
+
+                <ion-option-button class="button-assertive"
+                                   ng-click="edit(item)">
+                    编辑
+                </ion-option-button>
+                <ion-delete-button class="ion-minus-circled"
+                                   ng-click="items.splice($index, 1)">
+                </ion-delete-button>
+                <ion-reorder-button class="ion-navicon"
+                                    on-reorder="reorderItem(item, $fromIndex, $toIndex)">
+                </ion-reorder-button>
+            </ion-item>
+
+            <!--<ion-item collection-repeat="item in nItems" collection-item-width="100%" collection-item-height="getItemHeight(item, $index)" class="item-thumbnail-left">-->
+                <!--<img src="../../lib/1.jpg">-->
+
+                <!--{{item}}-->
+
+            <!--</ion-item>-->
+
+        </ion-list>
+
+
+
+
+        <!--<ion-toggle ng-model="airplaneMode" toggle-class="toggle-calm">Airplane Mode</ion-toggle>-->
+        <!--<ion-item ng-repeat="item in nItems" class="item item-thumbnail-left">-->
+
+            <!--<img src="../../lib/1.jpg">-->
+            <!--{{item}}-->
+
+        <!--</ion-item>-->
+
+
+
+    </ion-content>
+
+</ion-view>

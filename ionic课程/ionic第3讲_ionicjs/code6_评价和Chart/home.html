@@ -1,0 +1,17 @@
+<ion-view view-title="home">
+
+
+    <ion-content ng-controller="homeController">
+
+
+        <rating ng-model="rating.rate" max="rating.max" style="color: goldenrod"></rating>
+
+
+        <canvas id="pie" class="chart chart-pie"
+                chart-data="pieData" chart-labels="labels" chart-options="options">
+        </canvas>
+        <canvas id="bar" class="chart chart-bar" chart-data="data" chart-labels="labels1" chart-series="series" chart-options="options">
+        </canvas>
+    </ion-content>
+
+</ion-view>

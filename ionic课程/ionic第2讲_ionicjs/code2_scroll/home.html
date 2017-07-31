@@ -1,0 +1,17 @@
+<ion-view>
+
+    <!--ion-scroll如果在pc端的浏览器会有个bug,就是会被原生的滚动影响,解决办法就是去掉ion-scroll原生滚动条,如果想在ion-content里也使用ion-scroll 要么给ion-scroll一个固定的高 要么把ion-content的overflow-scroll="true"-->
+    <ion-content>
+        sssssdddddddd
+        <ion-scroll delegate-handle="www" zooming="true" direction="xy" style="overflow: hidden;height: 300px" paging="true" on-scroll="doSome()" scrollbar-y="false" scrollbar-x="false" min-zoom=".5" max-zoom=".5">
+
+            <div style="width: 800px;height: 300px;background-color: #0a9dc7">
+                hellosssssssssssssdasdadasdadassssssssssssssssssss
+            </div>
+            <div style="width: 600px;height: 1000px;background-color: red">
+                hellosssssssssssssdasdadasdadassssssssssssssssssss
+            </div>
+        </ion-scroll>
+    </ion-content>
+</ion-view>
+
